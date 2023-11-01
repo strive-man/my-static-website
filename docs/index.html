@@ -47,8 +47,9 @@ function openLocalPdf() {
         });
 
         document.getElementById('openPdfButton').addEventListener('click', function() {
-            var pdfUrl = "./KAP.pdf"
-            window.open(pdfUrl, '_blank');
+          const pdfPath = 'KAP.pdf'; // 替换为实际的 PDF 文件名
+           const pdfUrl = window.location.origin + '/' + pdfPath;
+           window.open(pdfUrl, '_blank'); // 在新窗口中打开 PDF 文件
         });
     </script>
 </body>
