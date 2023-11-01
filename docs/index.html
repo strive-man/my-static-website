@@ -17,6 +17,10 @@ function openLocalPdf() {
   const pdfUrl = window.location.origin + '/' + pdfPath;
   window.open(pdfUrl, '_blank'); // 在新窗口中打开 PDF 文件
 }
+  window.addEventListener('load', function () {
+  openLocalPdf(); // 模拟按钮点击事件
+});
+    
     </script>
 </body>
 </html>
