@@ -1,4 +1,4 @@
-以下是一个简单的HTML页面和JavaScript代码，当点击时会触发dataFormSubmits()方法来获取后端的PDF文件URL并在新窗口中打开：
+<!-- 以下是一个简单的HTML页面和JavaScript代码，当点击时会触发dataFormSubmits()方法来获取后端的PDF文件URL并在新窗口中打开：
 
 html
 Copy code
@@ -23,4 +23,35 @@ function openLocalPdf() {
     
     </script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>打开PDF文件</title>
+</head>
+<body>
+    <button id="openPdfButton">打开PDF文件</button>
+    <script>
+        // 定义一个函数来模拟按钮的点击事件
+        function simulateButtonClick() {
+            var button = document.getElementById('openPdfButton');
+            if (button) {
+                button.click();
+            }
+        }
+
+        // 在页面加载完成后自动触发按钮的点击事件
+        window.addEventListener('load', function () {
+            simulateButtonClick();
+        });
+
+        document.getElementById('openPdfButton').addEventListener('click', function() {
+            var pdfUrl = "./KAP.pdf"
+            window.open(pdfUrl, '_blank');
+        });
+    </script>
+</body>
 </html>
+
+
